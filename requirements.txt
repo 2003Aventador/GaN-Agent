@@ -1,0 +1,12 @@
+# 参赛 Agent 依赖（Python 3.10+，Windows 侧运行）
+# 编排框架（赛题限定 LangGraph / deepagents 混用）
+langgraph>=0.2.60
+langgraph-checkpoint-sqlite>=2.0.0
+langchain-core>=0.3.0
+deepagents>=0.0.5
+
+# 国产 LLM 网关（OpenAI 兼容协议：DeepSeek 主，Qwen/GLM 容灾）
+openai>=1.40.0
+
+# 基础
+pyyaml>=6.0

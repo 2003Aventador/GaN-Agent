@@ -1,0 +1,9 @@
+# 密钥与环境产物不入库
+config/secrets.yaml
+.venv/
+__pycache__/
+*.pyc
+logs/
+out/
+checkpoint/
+src/memory/store_data.json

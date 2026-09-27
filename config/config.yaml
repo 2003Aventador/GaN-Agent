@@ -1,0 +1,57 @@
+# 参赛 Agent 全局配置（不含 API key —— key 在 secrets.yaml / 环境变量，git 忽略）
+
+run:
+  # 单器件端到端预算
+  max_stage_retries: 3          # 阶段内重试上限（超过走专家诊断）
+  max_reflections: 1            # 全局反思轮数
+  error_converge_threshold: 0.05
+  stage_timeout_s: 900          # 单阶段（deepagents 子智能体）墙钟上限
+
+llm:
+  # 容灾顺序：deepseek → qwen → glm（OpenAI 兼容协议，任一故障自动切换）
+  primary:
+    provider: deepseek
+    model: deepseek-chat
+    base_url: https://api.deepseek.com
+  fallbacks:
+    - provider: qwen
+      model: qwen-plus
+      base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    - provider: glm
+      model: glm-4-flash
+      base_url: https://open.bigmodel.cn/api/paas/v4
+  request:
+    temperature: 0.2
+    max_tokens: 3000
+    timeout_s: 120
+    retries_per_provider: 2
+
+mcp:
+  pmms_exe: "../mcp/pmms.exe"          # 相对 Agent/ 目录解析
+  ssh_user: lkh
+  ssh_key: "~/.ssh/id_ed25519"
+  meqlab_path: "/home/lkh/eda/MS-MeQLab/bin/MS-MeQLab"
+  initialize_timeout_s: 180
+  call_timeout_s: 60
+  busy_max_retries: 30
+  project_dir: "/tmp/MeqlabProjects"   # 服务端工程目录
+
+wsl:
+  demo_dir: "/home/lkh/demo"
+  gan_pms_dir: "/home/lkh/demo/gan_pms"       # PMS 落点（服务端可见）
+  seed_model_path: "/home/lkh/demo/asm_seed.l"
+  server_out_dir: "/tmp/agent_out"            # 报告/模型卡服务端中转目录
+
+paths:
+  rawdata_dir: "../GaNHEMT_tcad_rawdata_gt"   # 仅 data_factory 允许读取
+  knowledge_dir: "knowledge"
+  logs_dir: "logs"
+  out_dir: "out"
+
+model:
+  # asm_gan 种子模型工程配置（实测链路）
+  model_suite_id: 0
+  lib_name: "TT"
+  simulator: "Pei"
+  model_name: "ngan"
+  expected_model_source: "ngan_TT_N"

@@ -1,0 +1,77 @@
+{
+  "default_stages": [
+    {
+      "id": "s1_cap",
+      "name": "电容 CV 提参",
+      "data_kinds": ["cv"],
+      "views": [],
+      "param_group": ["cgso", "cgdo", "epsilon", "vbi"],
+      "selection": "xr(0,1)",
+      "skip_when": "无 CV 数据源",
+      "degrade": {"action": "default_values", "note": "cgso/cgdo 保持卡默认，登记风险"}
+    },
+    {
+      "id": "s2_pinchoff",
+      "name": "夹断/亚阈(DIBL) IVg",
+      "data_kinds": ["ivg"],
+      "views": [{"page": "id_vgs", "source_ix": "ivg", "selection": "xr(0,1)", "prop": "logy"}],
+      "param_group": ["voff", "eta0"],
+      "selection": "xr(0,0.6)",
+      "skip_when": "无 IVg 数据源"
+    },
+    {
+      "id": "s3_mobility_sat",
+      "name": "迁移率/速度饱和 IVg+IVd",
+      "data_kinds": ["ivg", "ivd"],
+      "views": [
+        {"page": "id_vgs", "source_ix": "ivg", "selection": "xr(0,1)"},
+        {"page": "id_vds", "source_ix": "ivd", "selection": "xr(0,1)"}
+      ],
+      "param_group": ["u0", "vsat", "delta", "thesat"],
+      "selection": "xr(0,1)",
+      "skip_when": "无 IV 数据"
+    },
+    {
+      "id": "s4_access",
+      "name": "接入区 IVd 线性区",
+      "data_kinds": ["ivd"],
+      "views": [{"page": "id_vds", "source_ix": "ivd", "selection": "xr(0,0.3)"}],
+      "param_group": ["rsc", "rdc", "lsg", "ldg"],
+      "selection": "xr(0,0.3)",
+      "skip_when": "无 IVd 数据"
+    },
+    {
+      "id": "s5_parasitic",
+      "name": "寄生/输出电导",
+      "data_kinds": ["ivd"],
+      "views": [{"page": "id_vds", "source_ix": "ivd", "selection": "xr(0.5,1)"}],
+      "param_group": ["lambda", "vdscale"],
+      "selection": "xr(0.5,1)",
+      "skip_when": "无 IVd 数据"
+    },
+    {
+      "id": "s6_selfheat",
+      "name": "自热（多温联合）",
+      "data_kinds": ["multi_temp"],
+      "views": [],
+      "param_group": ["rth0", "cth0"],
+      "selection": "xr(0,1)",
+      "skip_when": "无多温数据",
+      "degrade": {"action": "literature_default", "note": "多温缺失：文献典型值 rth0=5, cth0=1e-9（卡默认），登记风险"}
+    },
+    {
+      "id": "s7_trap",
+      "name": "陷阱（Pulse IV 色散）",
+      "data_kinds": ["pulse"],
+      "views": [],
+      "param_group": ["trapmod", "rtrap1", "ctrap1"],
+      "selection": "xr(0,1)",
+      "skip_when": "无 Pulse 数据",
+      "degrade": {"action": "literature_default", "note": "Pulse 缺失：trapmod=0 关闭陷阱效应（卡默认），登记风险"}
+    }
+  ],
+  "termination": {
+    "error_threshold": 0.05,
+    "max_reflections": 1
+  }
+}

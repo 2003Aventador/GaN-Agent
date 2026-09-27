@@ -1,0 +1,478 @@
+[
+ {
+  "name": "tnom",
+  "default": "27"
+ },
+ {
+  "name": "tbar",
+  "default": "2.5e-8"
+ },
+ {
+  "name": "epsilon",
+  "default": "1.07e-10"
+ },
+ {
+  "name": "voff",
+  "default": "-2"
+ },
+ {
+  "name": "u0",
+  "default": "0.17"
+ },
+ {
+  "name": "ua",
+  "default": "0"
+ },
+ {
+  "name": "ub",
+  "default": "0"
+ },
+ {
+  "name": "vsat",
+  "default": "1.9e5"
+ },
+ {
+  "name": "delta",
+  "default": "2"
+ },
+ {
+  "name": "at",
+  "default": "0"
+ },
+ {
+  "name": "ute",
+  "default": "-0.5"
+ },
+ {
+  "name": "lambda",
+  "default": "0"
+ },
+ {
+  "name": "eta0",
+  "default": "1e-9"
+ },
+ {
+  "name": "vdscale",
+  "default": "5"
+ },
+ {
+  "name": "kt1",
+  "default": "0"
+ },
+ {
+  "name": "thesat",
+  "default": "1"
+ },
+ {
+  "name": "nfactor",
+  "default": "0.5"
+ },
+ {
+  "name": "cdscd",
+  "default": "1e-3"
+ },
+ {
+  "name": "gamma0i",
+  "default": "2.12e-12"
+ },
+ {
+  "name": "gamma1i",
+  "default": "3.73e-12"
+ },
+ {
+  "name": "imin",
+  "default": "1e-15"
+ },
+ {
+  "name": "shmod",
+  "default": "1"
+ },
+ {
+  "name": "rth0",
+  "default": "5"
+ },
+ {
+  "name": "cth0",
+  "default": "1e-9"
+ },
+ {
+  "name": "rdsmod",
+  "default": "0"
+ },
+ {
+  "name": "vsataccs",
+  "default": "5e4"
+ },
+ {
+  "name": "ns0accs",
+  "default": "5e17"
+ },
+ {
+  "name": "ns0accd",
+  "default": "5e17"
+ },
+ {
+  "name": "k0accs",
+  "default": "0"
+ },
+ {
+  "name": "k0accd",
+  "default": "0"
+ },
+ {
+  "name": "u0accs",
+  "default": "0.155"
+ },
+ {
+  "name": "u0accd",
+  "default": "0.155"
+ },
+ {
+  "name": "mexpaccs",
+  "default": "2"
+ },
+ {
+  "name": "mexpaccd",
+  "default": "2"
+ },
+ {
+  "name": "lsg",
+  "default": "1e-6"
+ },
+ {
+  "name": "ldg",
+  "default": "1e-6"
+ },
+ {
+  "name": "rsc",
+  "default": "1e-4"
+ },
+ {
+  "name": "rdc",
+  "default": "1e-4"
+ },
+ {
+  "name": "kns0",
+  "default": "0"
+ },
+ {
+  "name": "ats",
+  "default": "0"
+ },
+ {
+  "name": "utes",
+  "default": "0"
+ },
+ {
+  "name": "uted",
+  "default": "0"
+ },
+ {
+  "name": "krsc",
+  "default": "0"
+ },
+ {
+  "name": "krdc",
+  "default": "0"
+ },
+ {
+  "name": "gatemod",
+  "default": "0"
+ },
+ {
+  "name": "njgs",
+  "default": "2.5"
+ },
+ {
+  "name": "njgd",
+  "default": "2.5"
+ },
+ {
+  "name": "igsdio",
+  "default": "1"
+ },
+ {
+  "name": "igddio",
+  "default": "1"
+ },
+ {
+  "name": "ktgs",
+  "default": "0"
+ },
+ {
+  "name": "ktgd",
+  "default": "0"
+ },
+ {
+  "name": "trapmod",
+  "default": "0"
+ },
+ {
+  "name": "cdlag",
+  "default": "1e-6"
+ },
+ {
+  "name": "rdlag",
+  "default": "1e6"
+ },
+ {
+  "name": "idio",
+  "default": "1"
+ },
+ {
+  "name": "atrapvoff",
+  "default": "0.1"
+ },
+ {
+  "name": "btrapvoff",
+  "default": "0.3"
+ },
+ {
+  "name": "atrapeta0",
+  "default": "0"
+ },
+ {
+  "name": "btrapeta0",
+  "default": "0.05"
+ },
+ {
+  "name": "atraprs",
+  "default": "0.1"
+ },
+ {
+  "name": "btraprs",
+  "default": "0.6"
+ },
+ {
+  "name": "atraprd",
+  "default": "0.5"
+ },
+ {
+  "name": "btraprd",
+  "default": "0.6"
+ },
+ {
+  "name": "rtrap1",
+  "default": "1"
+ },
+ {
+  "name": "rtrap2",
+  "default": "1"
+ },
+ {
+  "name": "ctrap1",
+  "default": "1e-5"
+ },
+ {
+  "name": "ctrap2",
+  "default": "1e-6"
+ },
+ {
+  "name": "a1",
+  "default": "0.1"
+ },
+ {
+  "name": "vofftr",
+  "default": "1e-9"
+ },
+ {
+  "name": "cdscdtr",
+  "default": "1e-15"
+ },
+ {
+  "name": "eta0tr",
+  "default": "1e-15"
+ },
+ {
+  "name": "rontr1",
+  "default": "1e-12"
+ },
+ {
+  "name": "rontr2",
+  "default": "1e-13"
+ },
+ {
+  "name": "rontr3",
+  "default": "1e-13"
+ },
+ {
+  "name": "rtrap3",
+  "default": "1"
+ },
+ {
+  "name": "ctrap3",
+  "default": "1e-4"
+ },
+ {
+  "name": "vatrap",
+  "default": "10"
+ },
+ {
+  "name": "wd",
+  "default": "0.016"
+ },
+ {
+  "name": "vdlr1",
+  "default": "2"
+ },
+ {
+  "name": "vdlr2",
+  "default": "20"
+ },
+ {
+  "name": "talpha",
+  "default": "1"
+ },
+ {
+  "name": "vtb",
+  "default": "250"
+ },
+ {
+  "name": "deltax",
+  "default": "0.01"
+ },
+ {
+  "name": "fp1mod",
+  "default": "0"
+ },
+ {
+  "name": "fp2mod",
+  "default": "0"
+ },
+ {
+  "name": "fp3mod",
+  "default": "0"
+ },
+ {
+  "name": "fp4mod",
+  "default": "0"
+ },
+ {
+  "name": "cgso",
+  "default": "0"
+ },
+ {
+  "name": "cgdo",
+  "default": "0"
+ },
+ {
+  "name": "cdso",
+  "default": "0"
+ },
+ {
+  "name": "cgdl",
+  "default": "0"
+ },
+ {
+  "name": "vdsatcv",
+  "default": "100"
+ },
+ {
+  "name": "cbdo",
+  "default": "0"
+ },
+ {
+  "name": "cbso",
+  "default": "0"
+ },
+ {
+  "name": "cbgo",
+  "default": "0"
+ },
+ {
+  "name": "cfg",
+  "default": "0"
+ },
+ {
+  "name": "cfd",
+  "default": "0"
+ },
+ {
+  "name": "cfgd",
+  "default": "0"
+ },
+ {
+  "name": "cfgdsm",
+  "default": "1e-24"
+ },
+ {
+  "name": "cfgd0",
+  "default": "0"
+ },
+ {
+  "name": "cj0",
+  "default": "0"
+ },
+ {
+  "name": "vbi",
+  "default": "0.9"
+ },
+ {
+  "name": "ktvbi",
+  "default": "0"
+ },
+ {
+  "name": "ktcfg",
+  "default": "0"
+ },
+ {
+  "name": "ktcfgd",
+  "default": "0"
+ },
+ {
+  "name": "mz",
+  "default": "0.5"
+ },
+ {
+  "name": "aj",
+  "default": "0.1"
+ },
+ {
+  "name": "dj",
+  "default": "1"
+ },
+ {
+  "name": "rgatemod",
+  "default": "0"
+ },
+ {
+  "name": "xgw",
+  "default": "0"
+ },
+ {
+  "name": "rshg",
+  "default": "1e-3"
+ },
+ {
+  "name": "fnmod",
+  "default": "0"
+ },
+ {
+  "name": "tnmod",
+  "default": "0"
+ },
+ {
+  "name": "noia",
+  "default": "1.5e-11"
+ },
+ {
+  "name": "noib",
+  "default": "0"
+ },
+ {
+  "name": "noic",
+  "default": "0"
+ },
+ {
+  "name": "ef",
+  "default": "1"
+ },
+ {
+  "name": "tnsc",
+  "default": "1e27"
+ },
+ {
+  "name": "gdsmin",
+  "default": "1e-12"
+ }
+]
